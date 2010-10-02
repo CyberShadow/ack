@@ -569,6 +569,41 @@ sub is_searchable {
     return if $filename =~ m{^core\.\d+$}o;
     return if $filename =~ m{[._].*\.swp$}o;
 
+    return if $filename =~ /[.]obj$/;
+    return if $filename =~ /[.]pdb$/;
+    return if $filename =~ /[.]exe$/;
+    return if $filename =~ /[.]dll$/;
+    return if $filename =~ /[.]lib$/;
+    return if $filename =~ /[.]res$/;
+    return if $filename =~ /[.][hm]?dmp$/;
+    return if $filename =~ /[.]ncb$/;
+    return if $filename =~ /[.]idb$/;
+    return if $filename =~ /[.]bsc$/;
+    return if $filename =~ /[.]ilk$/;
+    return if $filename =~ /[.]aps$/;
+    return if $filename =~ /[.]cache$/;
+    return if $filename =~ /[.]mcp$/;
+    return if $filename =~ /[.]sbr$/;
+
+    return if $filename =~ /[.]bmp$/;
+    return if $filename =~ /[.]tga$/;
+    return if $filename =~ /[.]psd$/;
+    return if $filename =~ /[.]png$/;
+    return if $filename =~ /[.]jpg$/;
+    return if $filename =~ /[.]ico$/;
+    return if $filename =~ /[.]wav$/;
+    
+    return if $filename =~ /[.]rar$/;
+    return if $filename =~ /[.]zip$/;
+    return if $filename =~ /[.]7z$/;
+    return if $filename =~ /[.]cab$/;
+
+    return if $filename =~ /[.]dir$/;
+    return if $filename =~ /[.]img$/;
+    return if $filename =~ /[.]suo$/;
+    return if $filename =~ /[.]raw$/;
+    return if $filename =~ /[.]WAgame$/i;
+
     return 1;
 }
 
