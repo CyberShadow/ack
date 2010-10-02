@@ -11,6 +11,7 @@
 
 use warnings;
 use strict;
+use Win32::Console::ANSI;
 
 our $VERSION = '1.93_01';
 # Check http://betterthangrep.com/ for updates
