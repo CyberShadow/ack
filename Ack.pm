@@ -563,45 +563,45 @@ sub is_searchable {
     my $filename = shift;
 
     # If these are updated, update the --help message
-    return if $filename =~ /[.]bak$/;
+    return if $filename =~ /[.]bak$/i;
     return if $filename =~ /~$/;
     return if $filename =~ m{^#.*#$}o;
     return if $filename =~ m{^core\.\d+$}o;
     return if $filename =~ m{[._].*\.swp$}o;
 
-    return if $filename =~ /[.]obj$/;
-    return if $filename =~ /[.]pdb$/;
-    return if $filename =~ /[.]exe$/;
-    return if $filename =~ /[.]dll$/;
-    return if $filename =~ /[.]lib$/;
-    return if $filename =~ /[.]res$/;
-    return if $filename =~ /[.][hm]?dmp$/;
-    return if $filename =~ /[.]ncb$/;
-    return if $filename =~ /[.]idb$/;
-    return if $filename =~ /[.]bsc$/;
-    return if $filename =~ /[.]ilk$/;
-    return if $filename =~ /[.]aps$/;
-    return if $filename =~ /[.]cache$/;
-    return if $filename =~ /[.]mcp$/;
-    return if $filename =~ /[.]sbr$/;
+    return if $filename =~ /[.]obj$/i;
+    return if $filename =~ /[.]pdb$/i;
+    return if $filename =~ /[.]exe$/i;
+    return if $filename =~ /[.]dll$/i;
+    return if $filename =~ /[.]lib$/i;
+    return if $filename =~ /[.]res$/i;
+    return if $filename =~ /[.][hm]?dmp$/i;
+    return if $filename =~ /[.]ncb$/i;
+    return if $filename =~ /[.]idb$/i;
+    return if $filename =~ /[.]bsc$/i;
+    return if $filename =~ /[.]ilk$/i;
+    return if $filename =~ /[.]aps$/i;
+    return if $filename =~ /[.]cache$/i;
+    return if $filename =~ /[.]mcp$/i;
+    return if $filename =~ /[.]sbr$/i;
+    return if $filename =~ /[.]suo$/i;
 
-    return if $filename =~ /[.]bmp$/;
-    return if $filename =~ /[.]tga$/;
-    return if $filename =~ /[.]psd$/;
-    return if $filename =~ /[.]png$/;
-    return if $filename =~ /[.]jpg$/;
-    return if $filename =~ /[.]ico$/;
-    return if $filename =~ /[.]wav$/;
+    return if $filename =~ /[.]bmp$/i;
+    return if $filename =~ /[.]tga$/i;
+    return if $filename =~ /[.]psd$/i;
+    return if $filename =~ /[.]png$/i;
+    return if $filename =~ /[.]jpg$/i;
+    return if $filename =~ /[.]ico$/i;
+    return if $filename =~ /[.]wav$/i;
     
-    return if $filename =~ /[.]rar$/;
-    return if $filename =~ /[.]zip$/;
-    return if $filename =~ /[.]7z$/;
-    return if $filename =~ /[.]cab$/;
+    return if $filename =~ /[.]rar$/i;
+    return if $filename =~ /[.]zip$/i;
+    return if $filename =~ /[.]7z$/i;
+    return if $filename =~ /[.]cab$/i;
 
-    return if $filename =~ /[.]dir$/;
-    return if $filename =~ /[.]img$/;
-    return if $filename =~ /[.]suo$/;
-    return if $filename =~ /[.]raw$/;
+    return if $filename =~ /[.]dir$/i;
+    return if $filename =~ /[.]img$/i;
+    return if $filename =~ /[.]raw$/i;
     return if $filename =~ /[.]WAgame$/i;
 
     return 1;
